@@ -6,14 +6,13 @@
   background-color: #ffffff;
   border-bottom: 15px solid transparent;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  // padding-bottom: 1.5rem;
 
   font-weight: bold;
 
   &-logo {
-    padding-left: 10px;
-    color: #333333;
     padding: 0 2rem;
+    height: 3.5rem;
   }
 }
 .navbar-nav {
