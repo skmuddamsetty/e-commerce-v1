@@ -21,4 +21,8 @@ export class DataService {
   getProduct() {
     return this.product;
   }
+  addProduct(data: any) {
+    this.product.push(data);
+    console.log(this.product);
+  }
 }

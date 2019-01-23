@@ -9,14 +9,8 @@ export class ProductsComponent implements OnInit {
   product = [];
   constructor(public dataService: DataService) {
     this.product = this.dataService.getProduct();
+    console.log(this.product);
   }
 
   ngOnInit() {}
-  createRange(number) {
-    const items: number[] = [];
-    for (let i = 1; i <= number; i++) {
-      items.push(i);
-    }
-    return items;
-  }
 }

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from '../data.service';
+// import {
+// AngularFirestoreCollection,
+// AngularFirestore
+// } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-add-product',
@@ -8,7 +12,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  constructor(public datasevice: DataService) {}
+  // private productCollection: AngularFirestoreCollection<any>;
+  constructor(public dataService: DataService) {
+    // this.productCollection = afs.collection<any>('product');
+  }
 
   ngOnInit() {}
   onSubmit(santhosh: NgForm) {
@@ -18,5 +25,7 @@ export class AddProductComponent implements OnInit {
       productName: santhosh.value.productName,
       price: santhosh.value.price
     };
+    this.dataService.addProduct(product);
+    // this.productCollection.add(product);
   }
 }

@@ -3,9 +3,11 @@
   <br />
   <div class="row">
     <div class="products" *ngFor="let item of product">
-      <app-product>
-        [productName]="item.productName" [rating]="item.rating"
+      <app-product
+        [productName]="item.productName"
+        [rating]="item.rating"
         [price]="item.price"
+      >
       </app-product>
     </div>
   </div>
