@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-commerce';
+  createRange(number) {
+    const items: number[] = [];
+    for (let i = 1; i <= number; i++) {
+      items.push(i);
+    }
+    return items;
+  }
 }

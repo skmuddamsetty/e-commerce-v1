@@ -1,6 +1,16 @@
 <div class="main-container">
   <h1 align="center">Our Products</h1>
   <br />
+  <div class="row">
+    <div class="products" *ngFor="let item of product">
+      <app-product>
+        [productName]="item.productName" [rating]="item.rating"
+        [price]="item.price"
+      </app-product>
+    </div>
+  </div>
 
-  <app-product></app-product>
+  <!--<div class="sr-block" sr-meta="" sr-show-max="4">
+    <app-product> </app-product>
+  </div>-->
 </div>

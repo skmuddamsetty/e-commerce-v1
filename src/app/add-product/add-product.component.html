@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <input
+    class="form-control form-control-lg"
+    type="text"
+    placeholder="Enter Product Name"
+    ngModel
+    name="productName"
+  />
+  <input
+    class="form-control"
+    type="text"
+    placeholder="Enter Product Price"
+    ngModel
+    name="price"
+  />
+
+  <button type="submit">Submit</button>
+</form>
