@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
+import { ProductId } from '../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,12 +8,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  @Input() productName: string;
-  @Input() rating: string;
-  @Input() price: string;
-  constructor() {
-    console.log('productName', this.productName, 'price', this.price);
-  }
+  // @Input() productName: string;
+  // @Input() rating: string;
+  // @Input() price: string;
+  @Input() product: ProductId;
+  constructor() {}
 
   ngOnInit() {}
 }

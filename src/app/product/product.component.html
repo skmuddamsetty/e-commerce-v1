@@ -4,7 +4,7 @@
     class="product-img"
     alt="product image"
   />
-  <h2 class="product-title">{{ productName }}</h2>
+  <h2 class="product-title">{{ product.productName }}</h2>
   <div class="product-rating">
     <svg class="product-rating-icon">
       <use xlink:href="assets/img/sprite.svg#icon-star"></use>
@@ -22,6 +22,6 @@
       <use xlink:href="assets/img/sprite.svg#icon-star"></use>
     </svg>
   </div>
-  <div class="product-price">{{ price }}</div>
+  <div class="product-price">{{ product.price }}</div>
   <a href="#" class="product-button">Add To Cart</a>
 </div>

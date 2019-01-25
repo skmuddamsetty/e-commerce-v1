@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Product } from './models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  product = [
+  product: Product[] = [
     {
       productName: ' Black Smartwatch',
       rating: '*****',
@@ -21,7 +22,7 @@ export class DataService {
   getProduct() {
     return this.product;
   }
-  addProduct(data: any) {
+  addProduct(data: Product) {
     this.product.push(data);
     console.log(this.product);
   }

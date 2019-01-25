@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from '../data.service';
+import { Product } from '../models/product.model';
 // import {
 // AngularFirestoreCollection,
 // AngularFirestore
@@ -21,7 +22,7 @@ export class AddProductComponent implements OnInit {
   onSubmit(santhosh: NgForm) {
     console.log(santhosh.value.productName);
     // construct json object
-    const product = {
+    const product: Product = {
       productName: santhosh.value.productName,
       price: santhosh.value.price
     };
