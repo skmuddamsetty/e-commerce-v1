@@ -8,8 +8,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { DataService } from './data.service';
 import { AddProductComponent } from './add-product/add-product.component';
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFirestoreModule } from '@angular/fire/firestore';
+ import { AngularFireModule } from '@angular/fire';
+ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { environment } from 'src/environments/environment';
     ProductComponent,
     AddProductComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule],
   providers: [DataService],
   bootstrap: [AppComponent]
 })

@@ -20,7 +20,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {}
   onSubmit(santhosh: NgForm) {
-    console.log(santhosh.value.productName);
+    console.log(santhosh.value.category);
     // construct json object
     const product: Product = {
       productName: santhosh.value.productName,

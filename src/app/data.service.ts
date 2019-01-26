@@ -9,12 +9,14 @@ export class DataService {
     {
       productName: ' Black Smartwatch',
       rating: '*****',
-      price: '$290.00'
+      price: '$290.00',
+      category: 'Clocks'
     },
     {
       productName: ' Black Smartwatch',
       rating: '*****',
-      price: '$290.00'
+      price: '$290.00',
+      category: 'Electronics'
     }
   ];
 

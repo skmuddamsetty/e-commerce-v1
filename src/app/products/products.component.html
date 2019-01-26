@@ -2,17 +2,21 @@
   <nav class="sidebar">
     <h5 class="sidebar-heading" align="left">PRODUCT CATEGORIES</h5>
     <div class="sidebar-element">
-      <a class="sidebar-link" href="#">
+      <a class="sidebar-link" (click)="onCategorySelect('Clocks')" href="#">
         Clocks<span class="sr-only">(current)</span></a
       >
     </div>
     <div class="sidebar-element">
-      <a class="sidebar-link" href="#">
-        Electonics<span class="sr-only">(current)</span></a
+      <a
+        class="sidebar-link"
+        (click)="onCategorySelect('Electronics')"
+        href="#"
+      >
+        Electronics<span class="sr-only">(current)</span></a
       >
     </div>
     <div class="sidebar-element">
-      <a class="sidebar-link" href="#">
+      <a class="sidebar-link" (click)="onCategorySelect('Gadjets')" href="#">
         Gadjets<span class="sr-only">(current)</span></a
       >
     </div>
@@ -21,9 +25,12 @@
     <h1 align="center">Our Products</h1>
     <br />
 
-    <div class="row">
-      <div class="products" *ngFor="let item of product">
-        <app-product [product]="item"> </app-product>
+    <div class="row"><div class="products"></div></div>
+    <div class="container">
+      <div class="row">
+        <div class="col" *ngFor="let item of product">
+          <app-product [product]="item"> </app-product>
+        </div>
       </div>
     </div>
 
