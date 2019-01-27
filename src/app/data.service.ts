@@ -28,4 +28,11 @@ export class DataService {
     this.product.push(data);
     console.log(this.product);
   }
+
+  // add method to add product to database
+
+  addProducttoDB(data: Product) {
+    this.product.push(data);
+    console.log(this.product);
+  }
 }
