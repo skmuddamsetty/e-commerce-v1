@@ -19,5 +19,16 @@
     </svg>
   </div>
   <div class="product-price">{{ product.price }}</div>
-  <a href="#" class="product-button">Add To Cart</a>
+  <a
+    href="#"
+    class="product-button"
+    (click)="addToCart(product.productName, product.price)"
+    >Add To Cart</a
+  >
+  <a
+    href="#"
+    class="product-link"
+    (click)="addToWishList(product.productName, product.price)"
+    >Save For Later</a
+  >
 </div>

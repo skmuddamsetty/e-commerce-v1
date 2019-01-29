@@ -13,13 +13,23 @@
         >
       </li>
       <li class="navbar-nav-item">
-        <a class="navbar-nav-link" href="#"
-          >MyCart <span class="sr-only">(current)</span></a
+        <a class="navbar-nav-link" href="#" [routerLink]="['/my-cart']"
+          >MyCart ({{ currentNumberofItemInCart }})</a
         >
+        <svg class="navbar-nav-icon">
+          <use xlink:href="assets/img/symbol-defs.svg#icon-shopping-cart"></use>
+        </svg>
       </li>
       <li class="navbar-nav-item">
         <a class="navbar-nav-link" [routerLink]="['/add-product']"
           >AddProduct <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="navbar-nav-item">
+        <a class="navbar-nav-link" [routerLink]="['/wish-list']"
+          >WishList ({{ currentNumberofItemInWishList }})<span class="sr-only"
+            >(current)</span
+          ></a
         >
       </li>
     </ul>

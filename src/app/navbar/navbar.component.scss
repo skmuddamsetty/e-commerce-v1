@@ -27,6 +27,12 @@
     padding-left: 10px;
     transition: all 5s;
   }
+  &-icon {
+    height: 2rem;
+    width: 2rem;
+    //  fill: #0030b8;
+    margin-bottom: 15px;
+  }
   &-link {
     text-decoration: none;
     padding: 0 2rem;

@@ -12,7 +12,48 @@ export class ProductComponent implements OnInit {
   // @Input() rating: string;
   // @Input() price: string;
   @Input() product: ProductId;
-  constructor() {}
+  currentNumberofItemInCart = 0;
+  currentNumberofItemInWishList = 0;
+  constructor(public dataService: DataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dataService.getNumberOfItemsInCart().subscribe(numberOfItemsinCart => {
+      this.currentNumberofItemInCart = numberOfItemsinCart;
+      console.log(
+        'this.currentNumberofItemInCart',
+        this.currentNumberofItemInCart
+      );
+    });
+    this.dataService
+      .getNumberOfItemsInWishList()
+      .subscribe(numberOfItemsInWishList => {
+        this.currentNumberofItemInWishList = numberOfItemsInWishList;
+        console.log(
+          'this.currentNumberofItemInWishList',
+          this.currentNumberofItemInWishList
+        );
+      });
+  }
+  addToCart(productName: string, price: string) {
+    // this.books = this.dataService.getBookCart();
+    const product = {
+      productName: productName,
+      price: price
+    };
+    this.dataService.addToCart(product);
+    this.dataService.setNumberOfItemsInCart(this.currentNumberofItemInCart + 1);
+
+    console.log('products');
+  }
+  addToWishList(productName: string, price: string) {
+    const wishProduct = {
+      productName: productName,
+      price: price
+    };
+    this.dataService.addToWishList(wishProduct);
+    this.dataService.setNumberOfItemsInwishList(
+      this.currentNumberofItemInWishList + 1
+    );
+    console.log('products');
+  }
 }

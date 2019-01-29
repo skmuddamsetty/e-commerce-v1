@@ -11,6 +11,8 @@ import { AddProductComponent } from './add-product/add-product.component';
  import { AngularFireModule } from '@angular/fire';
  import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { MyCartComponent } from './my-cart/my-cart.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { environment } from 'src/environments/environment';
     NavbarComponent,
     ProductsComponent,
     ProductComponent,
-    AddProductComponent
+    AddProductComponent,
+    MyCartComponent,
+    WishListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule],

@@ -19,7 +19,9 @@ export class ProductsComponent implements OnInit {
     //  console.log(this.product);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.product = this.db.collection('clocks').valueChanges();
+  }
   onCategorySelect(category: string) {
     if (category === 'Clocks') {
       // this.product = this.dataService.getProduct();
